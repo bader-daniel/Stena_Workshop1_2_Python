@@ -1,0 +1,156 @@
+# skapa listor
+
+lista_heltal = [6, 5, 4, 3, 2, 1]
+lista_str = ['This', 'parrot', 'is', 'no', 'more']
+
+########################################################################################################################
+
+# få ut element ur en lista mha index och slices
+
+print(lista_heltal[0])
+# returnerar 6
+
+print(lista_heltal[0:4])
+# returnerar de 4 första elementen
+
+########################################################################################################################
+
+# Ändra element i listor mha index
+
+lista_heltal[0] = 10
+print(lista_heltal[0])
+# returnerar 10
+
+########################################################################################################################
+
+# len()
+# Räkna element i en variabel (t ex en lista)
+
+print(len(lista_str))
+# Returnerar 5
+
+# Tips! Ibland ser man två sätt att specificera sista elementet i en lista:
+# len(lista_heltal -1) - len() ger ju oss längden på en lista men eftersom index börjar på 0 behöver vi skriva -1.
+print(lista_str[len(lista_str) -1])
+# returnerar sista elementet i en lista
+
+# Det andra sättet är lite snyggare, där använder vi en slice
+# lista_heltal[-1] - Betyder sista elementet
+print(lista_str[-1])
+
+########################################################################################################################
+
+# append()
+# Lägga till ett element i en lista
+
+lista_str.append('nytt element')
+print(lista_str)
+# returnerar ['This', 'parrot', 'is', 'no', 'more', 'nytt element']
+
+########################################################################################################################
+
+# pop()
+# Ta bort element baserat på position
+
+# Ta bort sista elementet (det med högst index)
+lista_str.pop()
+print(lista_str)
+# returnerar ['This', 'parrot', 'is', 'no', 'more']
+
+# Ta bort med index
+lista_str.pop(0)
+print(lista_str)
+# returnerar ['parrot', 'is', 'no', 'more']
+
+########################################################################################################################
+
+# remove()
+# Ta bort element baserat på innehåll
+
+lista_str.remove('no')
+print(lista_str)
+# returnerar ['parrot', 'is', 'more']
+
+########################################################################################################################
+
+# sorted()
+# Returnerar innehållet i en variabel (t ex en lista) i sorterad form, ändrar inte listan
+
+print(sorted(lista_heltal))
+# returnerar [1, 2, 3, 4, 5, 10]
+print(lista_heltal)
+# returnerar [10, 5, 4, 3, 2, 1]
+
+########################################################################################################################
+
+# sort()
+# Sortera en lista, bestående ändring
+print(lista_heltal)
+# returnerar [10, 5, 4, 3, 2, 1]
+lista_heltal.sort()
+print(lista_heltal)
+# returnerar [1, 2, 3, 4, 5, 10]
+
+########################################################################################################################
+
+# count()
+# Räkna antal element i en lista som innehåller ett visst värde
+print(lista_heltal.count(1))
+# returnerar 1
+lista_heltal.append(1)
+print(lista_heltal.count(1))
+# returnerar 2
+
+########################################################################################################################
+
+# min()
+# Returnerar elementet med lägst värde i en variabel (t ex en lista)
+print(min(lista_heltal))
+# returnerar 1
+
+
+########################################################################################################################
+# max()
+# Returnerar elementet med högst värde i en variabel (t ex en lista)
+print(max(lista_heltal))
+# returnerar 10
+
+
+########################################################################################################################
+
+# sum()
+# Returnerar summan av alla element i en variabel (t ex en lista)
+print(sum(lista_heltal))
+# returnerar 26
+
+########################################################################################################################
+
+# clear()
+# Rensa en lista helt
+
+print(lista_heltal)
+# returnerar [1, 2, 3, 4, 5, 10, 1]
+lista_heltal.clear()
+print(lista_heltal)
+# returnerar []
+
+########################################################################################################################
+
+# Använd nästlade listor
+
+# Tilldela vanliga listor
+pilsner_attributes = ['Crispy', 'Moderate bitterness', 'Lager yeast',  'Some residual malt sweetness']
+ipa_attributes = ['Dry Hopped', 'High bitterness', 'High hop aroma', 'Moderare malt sweetness']
+flemmish_red_attributes = ['No percieved bitterness', 'moderate to highly sour', 'hight malt sweetness']
+
+# Skapa en ny lista och tilldela de tidigare skapade som element
+beer_styles = [pilsner_attributes, ipa_attributes, flemmish_red_attributes]
+
+print(beer_styles[1][2])
+# Returnerar High hop aroma - alltså tredje elementet från andra listan.
+beer_styles[1][2] = 'Hop bomb!'
+print(beer_styles[1][2])
+# Returnerar Hop bomb! - alltså det uppdatera tredje elementet från andra listan.
+
+########################################################################################################################
+

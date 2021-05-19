@@ -1,0 +1,26 @@
+"""Här visar jag två sätt att skapa en textbaserad meny. Först genom att skriva den rätt upp och ner, och sedan
+en genererad lista som är lite mer flexibel och dynamisk. """
+
+
+
+# statisk meny
+print("Static menu")
+
+print("1:\tspam\n2:\tham\n1:\teggs")
+print()
+user_choice = input("Please select option: ")
+print()
+
+# genererad meny
+print("Generated menu")
+
+menu_items = ['spam', 'ham', 'eggs']
+menu_design = ": \t "
+querry = "Please select option: "
+
+for num, item in enumerate(menu_items):
+    # enumerate är en ny funktion, den räknar och returnerar en siffra (från 0) för varje iterering
+    print(f"{num + 1}{menu_design}{item}")  # This is an f-string. It allows variables to be put inside strings.
+else:
+    print()
+    user_choice = input(querry)
