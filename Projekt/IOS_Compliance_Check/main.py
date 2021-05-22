@@ -64,3 +64,5 @@ if try_telnet:
 
 # check the hostname follows name standard
 
+
+
