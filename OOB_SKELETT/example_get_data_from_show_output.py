@@ -53,8 +53,8 @@ Configuration register is 0x2102"""
 for line in showver.split('\n'):
     if ' (revision' not in line:
         continue
-    ttype = line.split(' ')
-    type = ttype[1]
+    words_in_line = line.split(' ')
+    type = words_in_line[1]
 
     print(type)
 
