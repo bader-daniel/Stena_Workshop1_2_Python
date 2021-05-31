@@ -32,6 +32,10 @@ while 0 < credit < 1000:
 
     # Guess Loop
     while True:
+        # The try-statement is not something we've used yet. It "tries" to run the code, in this case it tries to
+        # convert the input() to an integer. Normally, if we would enter something that can't be converted to an
+        # integer here, the program would crash. With a try statement, we instead raise an exception, and execute
+        # the code under the except. We could also solve this with if-statements but the code would be harder to read.
         try:
             user_number = (int(input("Enter number: ")))
             if number_range[0] <= user_number <= number_range[-1]:
